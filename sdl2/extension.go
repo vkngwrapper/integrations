@@ -1,7 +1,5 @@
 package vkng_surface_sdl2
 
-//go:generate mockgen -source extension.go -destination ./mocks/mocks.go -package mock_surface_sdl2
-
 /*
 #include <stdlib.h>
 #include "vulkan/vulkan.h"
@@ -10,41 +8,17 @@ import "C"
 import (
 	"github.com/cockroachdb/errors"
 	"github.com/veandco/go-sdl2/sdl"
-	"github.com/vkngwrapper/core/common"
 	"github.com/vkngwrapper/core/core1_0"
 	"github.com/vkngwrapper/extensions/khr_surface"
 	khr_surface_driver "github.com/vkngwrapper/extensions/khr_surface/driver"
 	"unsafe"
 )
 
-type VulkanExtension struct {
-	driver khr_surface_driver.Driver
-}
-
-type Extension interface {
-	CreateSurface(instance core1_0.Instance, window *sdl.Window) (khr_surface.Surface, common.VkResult, error)
-}
-
-func CreateExtensionFromInstance(instance core1_0.Instance) *VulkanExtension {
-	driver := khr_surface_driver.CreateDriverFromCore(instance.Driver())
-	return &VulkanExtension{
-		driver: driver,
-	}
-}
-
-func CreateExtensionFromDriver(driver khr_surface_driver.Driver) *VulkanExtension {
-	return &VulkanExtension{
-		driver: driver,
-	}
-}
-
-func (l *VulkanExtension) CreateSurface(instance core1_0.Instance, window *sdl.Window) (khr_surface.Surface, common.VkResult, error) {
+func CreateSurface(instance core1_0.Instance, extension khr_surface.Extension, window *sdl.Window) (khr_surface.Surface, error) {
 	surfacePtrUnsafe, err := window.VulkanCreateSurface((*C.VkInstance)(unsafe.Pointer(instance.Handle())))
 	if err != nil {
-		return nil, core1_0.VKErrorUnknown, errors.Wrap(err, "could not retrieve surface from SDL")
+		return nil, errors.Wrap(err, "could not retrieve surface from SDL")
 	}
 
-	surfacePtr := (*C.VkSurfaceKHR)(surfacePtrUnsafe)
-
-	return khr_surface.CreateSurface(unsafe.Pointer(*surfacePtr), instance, l.driver)
+	return extension.CreateSurfaceFromHandle((khr_surface_driver.VkSurfaceKHR)(surfacePtrUnsafe))
 }
