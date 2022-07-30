@@ -27,5 +27,7 @@ func CreateSurface(instance core1_0.Instance, extension khr_surface.Extension, w
 		return nil, errors.Wrap(err, "could not retrieve surface from SDL")
 	}
 
-	return extension.CreateSurfaceFromHandle((khr_surface_driver.VkSurfaceKHR)(surfacePtrUnsafe))
+	surfaceHandlePtr := (*khr_surface_driver.VkSurfaceKHR)(surfacePtrUnsafe)
+
+	return extension.CreateSurfaceFromHandle(*surfaceHandlePtr)
 }

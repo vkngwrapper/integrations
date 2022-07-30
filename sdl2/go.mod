@@ -6,7 +6,7 @@ require (
 	github.com/cockroachdb/errors v1.9.0
 	github.com/veandco/go-sdl2 v0.4.24
 	github.com/vkngwrapper/core v0.2.1
-	github.com/vkngwrapper/extensions v0.2.0
+	github.com/vkngwrapper/extensions v0.2.1
 )
 
 require (
