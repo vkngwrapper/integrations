@@ -11,6 +11,7 @@ import (
 	"github.com/vkngwrapper/core/core1_0"
 	"github.com/vkngwrapper/extensions/khr_surface"
 	khr_surface_driver "github.com/vkngwrapper/extensions/khr_surface/driver"
+	_ "github.com/vkngwrapper/integrations/sdl2/vulkan"
 	"unsafe"
 )
 
