@@ -5,8 +5,8 @@ go 1.18
 require (
 	github.com/cockroachdb/errors v1.9.0
 	github.com/veandco/go-sdl2 v0.4.24
-	github.com/vkngwrapper/core v1.0.0
-	github.com/vkngwrapper/extensions v1.0.0
+	github.com/vkngwrapper/core v1.0.2
+	github.com/vkngwrapper/extensions v1.0.1
 )
 
 require (
@@ -20,5 +20,5 @@ require (
 	github.com/kr/text v0.2.0 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/rogpeppe/go-internal v1.8.1 // indirect
-	golang.org/x/sys v0.0.0-20220731174439-a90be440212d // indirect
+	golang.org/x/sys v0.0.0-20220804214406-8e32c043e418 // indirect
 )
