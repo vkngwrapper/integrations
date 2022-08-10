@@ -5,8 +5,8 @@ go 1.18
 require (
 	github.com/cockroachdb/errors v1.9.0
 	github.com/veandco/go-sdl2 v0.4.24
-	github.com/vkngwrapper/core v1.0.3
-	github.com/vkngwrapper/extensions v1.0.2
+	github.com/vkngwrapper/core v1.0.5
+	github.com/vkngwrapper/extensions v1.0.4
 )
 
 require (
