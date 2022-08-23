@@ -8,10 +8,10 @@ import "C"
 import (
 	"github.com/cockroachdb/errors"
 	"github.com/veandco/go-sdl2/sdl"
-	"github.com/vkngwrapper/core/core1_0"
-	"github.com/vkngwrapper/extensions/khr_surface"
-	khr_surface_driver "github.com/vkngwrapper/extensions/khr_surface/driver"
-	_ "github.com/vkngwrapper/integrations/sdl2/vulkan"
+	"github.com/vkngwrapper/core/v2/core1_0"
+	"github.com/vkngwrapper/extensions/v2/khr_surface"
+	khr_surface_driver "github.com/vkngwrapper/extensions/v2/khr_surface/driver"
+	_ "github.com/vkngwrapper/integrations/sdl2/v2/vulkan"
 	"unsafe"
 )
 
