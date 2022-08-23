@@ -1,5 +1,7 @@
 # SDL2 Integration v2
 
+`go get github.com/vkngwrapper/integrations/sdl2/v2`
+
 This integration provides a small utility to create khr_surface.Surface objects from Window options created
  with [go-sdl2](https://github.com/veandco/go-sdl2). In order to use this integration, you will need to install
  SDL2 to your local system using the instructions [here](https://github.com/veandco/go-sdl2#requirements).
