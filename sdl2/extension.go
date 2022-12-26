@@ -23,6 +23,10 @@ import (
 //
 // window - And SDL2 Window that the new khr_surface.Surface will represent
 func CreateSurface(instance core1_0.Instance, extension khr_surface.Extension, window *sdl.Window) (khr_surface.Surface, error) {
+	if instance == nil {
+		panic("instance cannot be nil")
+	}
+
 	surfacePtrUnsafe, err := window.VulkanCreateSurface((*C.VkInstance)(unsafe.Pointer(instance.Handle())))
 	if err != nil {
 		return nil, errors.Wrap(err, "could not retrieve surface from SDL")
