@@ -6,7 +6,7 @@ package vkng_surface_sdl2
 */
 import "C"
 import (
-	"github.com/cockroachdb/errors"
+	"github.com/pkg/errors"
 	"github.com/veandco/go-sdl2/sdl"
 	"github.com/vkngwrapper/core/v2/core1_0"
 	"github.com/vkngwrapper/extensions/v2/khr_surface"
