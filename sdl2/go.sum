@@ -4,6 +4,7 @@ github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/google/uuid v1.3.0 h1:t6JiXgmwXMjEs8VusXIJk2BXHsn+wx8BZdTaoZ5fu7I=
 github.com/google/uuid v1.3.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/google/uuid v1.6.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
@@ -14,8 +15,12 @@ github.com/veandco/go-sdl2 v0.4.34 h1:dqbUhV/SSJ35grdYTLv3iVxtO1NzNmgzMV//hyCyyp
 github.com/veandco/go-sdl2 v0.4.34/go.mod h1:OROqMhHD43nT4/i9crJukyVecjPNYYuCofep6SNiAjY=
 github.com/vkngwrapper/core/v2 v2.2.3 h1:YqV+S+ywZ7HtBGGicIDIGprBId1KTFFvxoAQSFJYQLQ=
 github.com/vkngwrapper/core/v2 v2.2.3/go.mod h1:3F5gRWiRbbsEH3DPp67sezuP+4+m3fDEDYoWymd2N0I=
+github.com/vkngwrapper/core/v3 v3.0.0-20251228065631-e77e9749ad14 h1:5vVkyayF+GnHhRU+zQTwcYgqwhxoaAKKV4Qgs0js3os=
+github.com/vkngwrapper/core/v3 v3.0.0-20251228065631-e77e9749ad14/go.mod h1:lIcOUaI3UePxmy+LW29EqmozCaVKF+r+pncbtx36qO4=
 github.com/vkngwrapper/extensions/v2 v2.2.1 h1:gWofZrduJj4maY2zVXo0kOuugTdXbuuEtf9Fmkt3tpU=
 github.com/vkngwrapper/extensions/v2 v2.2.1/go.mod h1:9LHOV8dQvJqQrWLGTuQ+JQ+2RvmkLV5zrq+Elt9qgRw=
+github.com/vkngwrapper/extensions/v3 v3.0.0-20251229011441-67edc87f47e1 h1:Io9wA06QHhxbqUm72ZdjvTEDiLNU5qlgy25HIcE000w=
+github.com/vkngwrapper/extensions/v3 v3.0.0-20251229011441-67edc87f47e1/go.mod h1:/w1qucPWTcUu3A21mtXy2yELE1j6KhllolSPoK53OPE=
 go.uber.org/mock v0.6.0 h1:hyF9dfmbgIX5EfOdasqLsWD6xqpNZlXblLB/Dbnwv3Y=
 go.uber.org/mock v0.6.0/go.mod h1:KiVJ4BqZJaMj4svdfmHM0AUx4NJYO8ZNpPnZn1Z+BBU=
 gopkg.in/yaml.v3 v3.0.1 h1:fxVm/GzAzEWqLHuvctI91KS9hhNmmWOoWu0XTYJS7CA=

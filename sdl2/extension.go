@@ -6,13 +6,14 @@ package vkng_surface_sdl2
 */
 import "C"
 import (
+	"unsafe"
+
 	"github.com/pkg/errors"
 	"github.com/veandco/go-sdl2/sdl"
-	"github.com/vkngwrapper/core/v2/core1_0"
-	"github.com/vkngwrapper/extensions/v2/khr_surface"
-	khr_surface_driver "github.com/vkngwrapper/extensions/v2/khr_surface/driver"
-	_ "github.com/vkngwrapper/integrations/sdl2/v2/vulkan"
-	"unsafe"
+	"github.com/vkngwrapper/core/v3"
+	"github.com/vkngwrapper/extensions/v3/khr_surface"
+	"github.com/vkngwrapper/extensions/v3/khr_surface/loader"
+	_ "github.com/vkngwrapper/integrations/sdl2/v3/vulkan"
 )
 
 // CreateSurface generates a khr_surface.Surface from an SDL2 Window
@@ -22,17 +23,17 @@ import (
 // extension - A khr_surface.Extension object
 //
 // window - And SDL2 Window that the new khr_surface.Surface will represent
-func CreateSurface(instance core1_0.Instance, extension khr_surface.Extension, window *sdl.Window) (khr_surface.Surface, error) {
-	if instance == nil {
-		panic("instance cannot be nil")
+func CreateSurface(instance core.Instance, extension khr_surface.ExtensionDriver, window *sdl.Window) (khr_surface.Surface, error) {
+	if instance.Handle() == 0 {
+		panic("instance cannot be uninitialized")
 	}
 
 	surfacePtrUnsafe, err := window.VulkanCreateSurface((*C.VkInstance)(unsafe.Pointer(instance.Handle())))
 	if err != nil {
-		return nil, errors.Wrap(err, "could not retrieve surface from SDL")
+		return khr_surface.Surface{}, errors.Wrap(err, "could not retrieve surface from SDL")
 	}
 
-	surfaceHandlePtr := (*khr_surface_driver.VkSurfaceKHR)(surfacePtrUnsafe)
+	surfaceHandlePtr := (*khr_surface_loader.VkSurfaceKHR)(surfacePtrUnsafe)
 
 	return extension.CreateSurfaceFromHandle(*surfaceHandlePtr)
 }
