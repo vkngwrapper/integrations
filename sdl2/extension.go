@@ -10,7 +10,7 @@ import (
 
 	"github.com/pkg/errors"
 	"github.com/veandco/go-sdl2/sdl"
-	"github.com/vkngwrapper/core/v3"
+	"github.com/vkngwrapper/core/v3/core1_0"
 	"github.com/vkngwrapper/extensions/v3/khr_surface"
 	"github.com/vkngwrapper/extensions/v3/khr_surface/loader"
 	_ "github.com/vkngwrapper/integrations/sdl2/v3/vulkan"
@@ -23,7 +23,7 @@ import (
 // extension - A khr_surface.Extension object
 //
 // window - And SDL2 Window that the new khr_surface.Surface will represent
-func CreateSurface(instance core.Instance, extension khr_surface.ExtensionDriver, window *sdl.Window) (khr_surface.Surface, error) {
+func CreateSurface(instance core1_0.Instance, extension khr_surface.ExtensionDriver, window *sdl.Window) (khr_surface.Surface, error) {
 	if !instance.Initialized() {
 		panic("instance cannot be uninitialized")
 	}
