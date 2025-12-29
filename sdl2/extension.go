@@ -24,7 +24,7 @@ import (
 //
 // window - And SDL2 Window that the new khr_surface.Surface will represent
 func CreateSurface(instance core.Instance, extension khr_surface.ExtensionDriver, window *sdl.Window) (khr_surface.Surface, error) {
-	if instance.Handle() == 0 {
+	if !instance.Initialized() {
 		panic("instance cannot be uninitialized")
 	}
 
