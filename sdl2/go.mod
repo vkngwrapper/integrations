@@ -5,8 +5,8 @@ go 1.25
 require (
 	github.com/pkg/errors v0.9.1
 	github.com/veandco/go-sdl2 v0.4.40
-	github.com/vkngwrapper/core/v3 v3.0.1
-	github.com/vkngwrapper/extensions/v3 v3.0.3
+	github.com/vkngwrapper/core/v3 v3.0.2
+	github.com/vkngwrapper/extensions/v3 v3.0.4
 )
 
 require (
