@@ -1,12 +1,12 @@
 module github.com/vkngwrapper/integrations/sdl2/v3
 
-go 1.25
+go 1.27
 
 require (
 	github.com/pkg/errors v0.9.1
 	github.com/veandco/go-sdl2 v0.4.40
-	github.com/vkngwrapper/core/v3 v3.0.2
-	github.com/vkngwrapper/extensions/v3 v3.0.4
+	github.com/vkngwrapper/core/v3 v3.1.3
+	github.com/vkngwrapper/extensions/v3 v3.3.1
 )
 
 require (
